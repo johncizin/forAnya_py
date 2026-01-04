@@ -80,7 +80,7 @@ def processData(data):
 - Super simple, here I'm just indexing the array with the `keys` we defined [here](#data-structure-of-file-dictionary)
 - I print out the values at each key and thats what you'll see in the terminal.
 - Example Output:
-```
+    - ```
 Data retrieved successfully:
 Processing Data...
 User ID: 13456767
