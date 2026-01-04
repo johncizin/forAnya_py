@@ -163,7 +163,6 @@ Example behavior:
 
 🧠 *Optional:*  
 - Add another option (ex: `1` for Page ID)  
-- Handle invalid input gracefully
 
 <details>
   <summary><strong>Solution</strong></summary>
