@@ -21,7 +21,7 @@
 
 > *This UML-style diagram models the nested dictionary structure returned by the simulated API call.*
 
-In Python Code:
+In python code it looks like:
 ```python
 simplfifiedOutputTable = {
     "userID": 13456767, 
@@ -38,15 +38,30 @@ simplfifiedOutputTable = {
 }
 ```
 
-
 ### Function Explanations:
 #### getNotionData()
 ```python
 def getNotionData():
-    #This is where you would normally call the Notion API and get the data
-    #But for this example, we will just return the simplifiedOutputTable
     return simplfifiedOutputTable
 ```
+- This is what I'm gonna call a "Dummy Method" because it actually has no functional value
+- My reasoning for including it is in the function [callAPI](#callAPI) is to simply to simulate the "output" of an API because when we are working with an API we won't have the luxury of having the data already available to use defined as a dictionary in the code.
+
+#### callAPI()
+```python
+def callAPI():
+    try:
+        data = getNotionData()
+        print("Data retrieved successfully:")
+        processData(data)
+    except Exception as e:
+        print("An error occurred while calling the Notion API:", str(e))
+```
+- This function simulates an API call
+- We get the added from our [dummy method](#getnotiondata) and I wrapped it in a `try` block
+    - A `try` block does exactly what it sounds like: it *attempts* to run code that might fail.  When working with external systems like APIs, things can go wrong (network issues, bad responses, invalid data). Using `try` lets the program handle those errors gracefully instead of crashing, so we can see *what* failed and *why*.
+
+
 
 
 
