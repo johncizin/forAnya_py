@@ -140,12 +140,37 @@ Use `.items()` to access key–value pairs.
   ```python
   def processData(data):
     for key, value in data.items():
-        print("Key: ", key, "Value", value)
+        print("Key: ", key, "Value: ", value)
 ```
 </details>
 
 ---
+### 🔴 Challenge 3: User Input Layer
+**Goal:** Connect user input to program behavior
 
+- Prompt the user for input using `input()`
+- Based on the input, print a specific value from the dictionary
+
+Example behavior:
+
+> If the *user* enters: 0
+> The program outputs: *My Homework* (The Title of the Page)
+
+💡 *Hint:*  
+- `input()` always returns a string  
+- You can use `if` statements to decide what to print  
+
+🧠 *Optional:*  
+- Add another option (ex: `1` for Page ID)  
+- Handle invalid input gracefully
+
+<details>
+  <summary><strong>Solution</strong></summary>
+  Bruh you thought 😭 TRY IT
+    <p align="center">
+    <img src="./imgs/danielLopez.jpg" alt="basicNotion_DataModel Image"> 
+</p> 
+</details>
 
 
 
