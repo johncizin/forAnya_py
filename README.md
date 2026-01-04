@@ -13,7 +13,8 @@
 
 # 🟢 Walkthrough
 ## basicNotion.py
-
+UML Structure of File:
+<img src="./imgs/basicNotion_DataModel.png" alt="basicNotion_DataModel Image"> 
 
 
 
