@@ -18,7 +18,26 @@
 <p align="center">
     <img src="./imgs/basicNotion_DataModel.png" alt="basicNotion_DataModel Image"> 
 </p>
+
 > *This UML-style diagram models the nested dictionary structure returned by the simulated API call.*
+In Python Code:
+```python
+    integers starting from 0
+simplfifiedOutputTable = {
+    "userID": 13456767, 
+    "page" : {
+         "pageID": "hdjkfswhefuewfhd343456564534465",
+        "title" : "My Homework",
+        "CreatedOn" : "2026-01-03",
+        "LastEdited" : "2026-01-03",
+        "content" : {
+           "type" : "string",
+           "content": "This is my First heading"
+        }
+    }
+}
+```
+
 
 ### Function Explanations:
 #### getNotionData()
