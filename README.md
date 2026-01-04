@@ -20,9 +20,9 @@
 </p>
 
 > *This UML-style diagram models the nested dictionary structure returned by the simulated API call.*
+
 In Python Code:
 ```python
-    integers starting from 0
 simplfifiedOutputTable = {
     "userID": 13456767, 
     "page" : {
