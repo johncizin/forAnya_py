@@ -14,10 +14,24 @@
 
 # 🟢 Walkthrough
 ## basicNotion.py
-### UML Structure of File:
+### Data Structure of File (Dictionary):
 <p align="center">
     <img src="./imgs/basicNotion_DataModel.png" alt="basicNotion_DataModel Image"> 
 </p>
+> *This UML-style diagram models the nested dictionary structure returned by the simulated API call.*
+
+### Function Explanations:
+#### getNotionData()
+```python
+def getNotionData():
+    #This is where you would normally call the Notion API and get the data
+    #But for this example, we will just return the simplifiedOutputTable
+    return simplfifiedOutputTable
+```
+
+
+
+
 
 
 
