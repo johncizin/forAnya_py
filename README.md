@@ -129,13 +129,14 @@ The title is nested inside the `page` dictionary.
 
 - Loop through the `simplfifiedOutputTable` dictionary
 - Print each key and its value dynamically
+- Replace [processData(data)](#processdatadata) function with your solution.
 
 💡 *Hint:*  
 Use `.items()` to access key–value pairs.
 
 <details>
   <summary><strong>Solution</strong></summary>
-  
+
   ```python
   def processData(data):
     for key, value in data.items():
