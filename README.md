@@ -154,6 +154,7 @@ Use `.items()` to access key–value pairs.
 Example behavior:
 
 > If the *user* enters: 0
+>
 > The program outputs: *My Homework* (The Title of the Page)
 
 💡 *Hint:*  
