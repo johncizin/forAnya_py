@@ -3,6 +3,7 @@
 ## Table of Contents:
 - [Quick Description](#quick-description)
 - [Walkthrough](#-walkthrough)
+    - [basicNotion.py](#basicnotionpy)
 
 
 # Quick Description:
@@ -13,8 +14,10 @@
 
 # 🟢 Walkthrough
 ## basicNotion.py
-UML Structure of File:
-<img src="./imgs/basicNotion_DataModel.png" alt="basicNotion_DataModel Image"> 
+### UML Structure of File:
+<p align="center">
+    <img src="./imgs/basicNotion_DataModel.png" alt="basicNotion_DataModel Image"> 
+</p>
 
 
 
