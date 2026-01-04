@@ -61,6 +61,37 @@ def callAPI():
 - We get the added from our [dummy method](#getnotiondata) and I wrapped it in a `try` block
     - A `try` block does exactly what it sounds like: it *attempts* to run code that might fail.  When working with external systems like APIs, things can go wrong (network issues, bad responses, invalid data). Using `try` lets the program handle those errors gracefully instead of crashing, so we can see *what* failed and *why*.
 
+#### processData(data)
+```python
+
+def processData(data):
+    print("Processing Data...")
+    print("User ID:", data["userID"])
+    page = data["page"]
+    print("Page ID:", page["pageID"])
+    print("Title:", page["title"])
+    print("Created On:", page["CreatedOn"])
+    print("Last Edited:", page["LastEdited"])
+    content = page["content"]
+    print("Content Type:", content["type"])
+    print("Content:", content["content"])
+
+```
+- Super simple, here I'm just indexing the array with the `keys` we defined [here](#data-structure-of-file-dictionary)
+- I print out the values at each key and thats what you'll see in the terminal.
+- Example Output:
+```
+Data retrieved successfully:
+Processing Data...
+User ID: 13456767
+Page ID: hdjkfswhefuewfhd343456564534465
+Title: My Homework
+Created On: 2026-01-03
+Last Edited: 2026-01-03
+Content Type: string
+Content: This is my First heading
+```
+
 
 
 
