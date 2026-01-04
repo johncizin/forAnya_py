@@ -92,6 +92,9 @@ Content Type: string
 Content: This is my First heading
 ```
 ## 🧠 Challenges using [basicNotion.py](#basicnotionpy):
+
+**All that talking was getting mad boring now u try 🙏🏿**
+
 **Difficulty Key**
 - 🟢 Easy
 - 🟡 Medium
@@ -162,7 +165,7 @@ Example behavior:
 - You can use `if` statements to decide what to print  
 
 🧠 *Optional:*  
-- Add another option (ex: `1` for Page ID)  
+- Add another option (ex: `1` for Page ID) 
 
 <details>
   <summary><strong>Solution</strong></summary>
