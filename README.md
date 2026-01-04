@@ -127,14 +127,20 @@ The title is nested inside the `page` dictionary.
 ### 🟡 Challenge 2: Loop Instead of Hardcoding
 **Goal:** Reduce repetition and improve flexibility
 
-- Loop through the `page` dictionary
+- Loop through the `simplfifiedOutputTable` dictionary
 - Print each key and its value dynamically
-- Skip nested dictionaries (`content`) for now
 
 💡 *Hint:*  
 Use `.items()` to access key–value pairs.
 
-
+<details>
+  <summary><strong>Solution</strong></summary>
+  ```python
+  def processData(data):
+    for key, value in data.items():
+        print("Key: ", key, "Value", value)
+``` 
+</details>
 
 ---
 

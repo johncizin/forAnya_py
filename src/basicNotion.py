@@ -68,7 +68,9 @@ def processData(data):
 def app():
     callAPI()
 #Then we just call the app function to see the results and we done gng
+
 app()
+
 
 
 #if you want a challenge ig what id suggest is adding a "user" layer where youy can use the command line to take input from the user and output what they asked for. for exmapkle:  Press 0 for Page Heading :and it returns: My Homework 
