@@ -28,8 +28,8 @@ app.post('/', async (req, res) => {
 
         const call = req.body.call;
         //console.log(req.body)
-        const callId = call?.call_id;
-        const firstName = call?.collected_dynamic_variables?.first_name;
+        const callId = call?.call_id || '';
+        const firstName = call?.collected_dynamic_variables?.first_name || '';
         const timeStamp = new Date().toString();
         const transcript = call?.transcript || '';
         const disonnectedReason = call?.disconnection_reason || '';
