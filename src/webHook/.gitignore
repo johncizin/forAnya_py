@@ -2,3 +2,4 @@
 .env.*
 serviceAccount.json
 *.key.json
+.DS_Store
