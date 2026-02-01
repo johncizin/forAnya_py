@@ -32,11 +32,12 @@ app.post('/', async (req, res) => {
         const firstName = call?.collected_dynamic_variables?.first_name || '';
         const timeStamp = new Date().toString();
         const transcript = call?.transcript || '';
+        const audio = call?.recording_url || '';
         const disonnectedReason = call?.disconnection_reason || '';
 
         console.log(transcript);
 
-        await sheet.spreadsheets.values.append({
+        await sheet.spreadsheets.values.update({
             spreadsheetId: process.env.SHEET_ID,
             range: 'Sheet1!A:E',
             valueInputOption: 'USER-ENTERED',
@@ -46,6 +47,7 @@ app.post('/', async (req, res) => {
                     firstName,
                     timeStamp,
                     transcript,
+                    audio,
                     disonnectedReason
                 ]]
             }
@@ -55,11 +57,17 @@ app.post('/', async (req, res) => {
     } catch(err){
         console.error("ERROR:")
         console.error(err.message);
-    } 
+    }
     //for testing purposes
     /*
-    if (req.body) {
+    if (req.body && req.body.event === 'call_analyzed') {
        // console.log('Call ended event received');
+       try{
+           //whatever ur testing
+       } catch(err){
+            console.error("ERROR:")
+            console.error(err.message);
+       }
          console.log(req.body.call);
          res.status(200).send('Webhook received');
     } else {
