@@ -1,0 +1,10 @@
+{
+  "name": "retell-webhook",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "concurrently \"node server.js\" \"ngrok http 3000\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.0"
+  }
+}

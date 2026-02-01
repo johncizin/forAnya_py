@@ -6,7 +6,7 @@
 #Right here we are physically importing all of the functions associated with the package
 import json
 
-json_FilePath = "/Users/johncizin/Developer/forAnya_foreverAgo/src/pseudoOutput.json"
+json_FilePath = "./src/pseudoOutput.json"
 
 #This function reads a JSON file and returns the data as a Python dictionary
 #This is our pseudo API call function
