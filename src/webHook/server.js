@@ -17,8 +17,6 @@ const sheet = google.sheets({ version: 'v4', auth });
 
 app.use(bodyParser.json());
 
-//post endpoint to receive webhook events
-// this receives call ended events from retell.ai
 app.post('/', async (req, res) => {
 
     try{
@@ -27,7 +25,6 @@ app.post('/', async (req, res) => {
         }
 
         const call = req.body.call;
-        //console.log(req.body)
         const callId = call?.call_id || '';
         const firstName = call?.collected_dynamic_variables?.first_name || '';
         const timeStamp = new Date().toString();
@@ -37,7 +34,7 @@ app.post('/', async (req, res) => {
 
         console.log(transcript);
 
-        await sheet.spreadsheets.values.update({
+        await sheet.spreadsheets.values.append({
             spreadsheetId: process.env.SHEET_ID,
             range: 'Sheet1!A:E',
             valueInputOption: 'USER-ENTERED',
@@ -58,52 +55,7 @@ app.post('/', async (req, res) => {
         console.error("ERROR:")
         console.error(err.message);
     }
-    //for testing purposes
-    /*
-    if (req.body && req.body.event === 'call_analyzed') {
-       // console.log('Call ended event received');
-       try{
-           //whatever ur testing
-       } catch(err){
-            console.error("ERROR:")
-            console.error(err.message);
-       }
-         console.log(req.body.call);
-         res.status(200).send('Webhook received');
-    } else {
-        res.status(400).send('Invalid event type');
-    } */
 });
-
-//get endpoint to fetch data from Google Sheets
-//just tryingto get the data from the spreadsheet rn as a test
-//Ight this works now gonna do the actual implementation
-/*
-app.get('/read-sheet-data', async (req, res) => {
-    try{
-        const sheet = google.sheets({ version: 'v4', auth });
-
-        const response = await sheet.spreadsheets.values.get({
-            spreadsheetId: process.env.SHEET_ID,
-            range: 'Sheet1!A1:A2',
-        });
-
-        const rows = response.data.values;
-        if (rows.length) {
-            console.log('Data from sheet:', rows);
-        } else {
-            res.status(200).send('No data found.');
-        }
-    } catch (err) {
-    console.error('GOOGLE SHEETS ERROR ↓↓↓');
-    console.error(err.message);
-    if (err.response?.data) {
-      console.error(JSON.stringify(err.response.data, null, 2));
-    }
-    res.status(500).json({ error: 'Failed to read sheet' });
-  }
-}); */
-
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
